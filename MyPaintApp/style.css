@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    /* Prevents scrollbars on the whole window */
+    background: #555;
+    /* Dark background behind the workspace */
+}
+
+.paint-app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+/* --- TOOLBAR--- */
+
+.toolbar {
+    background: #f5f6f7;
+    border-bottom: 1px solid #dadbdc;
+    padding: 5px;
+    height: 90px;
+    display: flex;
+    gap: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.tool-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+    border-right: 1px solid #e0e0e0;
+}
+
+.section-title {
+    font-size: 11px;
+    color: #767676;
+    margin-top: auto;
+    padding-bottom: 2px;
+}
+
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+}
+
+
+/* --- BUTTONS --- */
+
+.tool-btn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid transparent;
+    background: transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.1s;
+}
+
+.tool-btn:hover {
+    background-color: #e8efeda1;
+    border-color: #aebcb9;
+}
+
+.tool-btn.active {
+    background-color: #cce8ff;
+    border-color: #68b2e3;
+}
+
+
+/* --- COLOR SECTION --- */
+
+.swatch-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3x3 grid for the 9 colors */
+    gap: 3px;
+    margin-bottom: 5px;
+}
+
+.swatch {
+    width: 18px;
+    /* Slightly larger for the smaller grid */
+    height: 18px;
+    border: 1px solid #a0a0a0;
+    padding: 0;
+    cursor: pointer;
+    box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.swatch:hover {
+    border-color: #000;
+    outline: 1px solid #fff;
+}
+
+
+/* Ensure the color picker stands out */
+
+.picker {
+    width: 40px;
+    height: 25px;
+    padding: 0;
+    border: 1px solid #888;
+    background: #fff;
+    cursor: pointer;
+}
+
+
+/* Tool section height adjustment to fit the new grid */
+
+.tool-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 12px;
+    border-right: 1px solid #dadbdc;
+    min-width: 60px;
+}
+
+
+/* Ensure sliders and labels look clean */
+
+.tool-section span {
+    font-size: 11px;
+    margin-bottom: 2px;
+}
+
+
+/* --- WORKSPACE & CANVAS --- */
+
+.workspace {
+    flex: 1;
+    background-color: #c0c0c0;
+    overflow: auto;
+    display: flex;
+    padding: 20px;
+    position: relative;
+}
+
+.canvas-box {
+    background: white;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    resize: both;
+    /* ENABLES DRAG RESIZING */
+    overflow: hidden;
+    min-width: 100px;
+    min-height: 100px;
+    width: 800px;
+    height: 600px;
+}
+
+
+/* --- UTILS --- */
+
+.file-input {
+    font-size: 10px;
+    width: 150px;
+}
+
+
+/* use paint app for reference & applied OOP refsctoring
+/* delve with Test Driven Development */
+
+
+/* agile test*/
+
+
+/* formulate user stories */
